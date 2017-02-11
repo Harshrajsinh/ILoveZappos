@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/list_border">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:maxLength="12"
+            android:text="Hey"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:id="@+id/mainTitle"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hey all!!  How are you?"
+            android:layout_marginTop="3dp"
+            android:textColor="#000"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:maxLength="12"
+            android:id="@+id/subTitle"
+            android:layout_below="@id/mainTitle"
+            />
+        <TextView
+            android:id="@+id/price"
+            android:textColor="#000"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="9dp"
+            android:textSize="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hey all!!"
+            />
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageTitle"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</LinearLayout>

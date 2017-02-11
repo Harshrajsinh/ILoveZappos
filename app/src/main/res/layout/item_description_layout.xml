@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name = "item"
+            type = "com.example.harshraj.ilovezappos.Model.ItemDescription"/>
+    </data>
+    <ScrollView
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:textColor="@color/primary_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:id="@+id/date"
+                android:text="@{item.productName}"
+                android:layout_alignParentLeft="true"/>
+
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/date_divider"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/date"
+                android:background="@color/secondary_text"
+                />
+
+            <TextView
+                android:textColor="@color/primary_text"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/date_divider"
+                android:id="@+id/offer_source"
+                android:text="@{item.brandName}"
+                android:textSize="15sp"
+                android:layout_alignParentLeft="true"/>
+
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/place_divider"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/offer_source"
+                android:background="@color/secondary_text"
+                />
+
+            <TextView
+                android:text="@{item.originalPrice}"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/place_divider"
+                android:textColor="@color/primary_text"
+                android:textSize="15sp"
+                android:id="@+id/label_no_seats"/>
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/label_no_seats_divider"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/label_no_seats"
+                android:background="@color/secondary_text"
+                />
+
+            <TextView
+                android:text="@{item.percentOff}"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/label_no_seats_divider"
+                android:textColor="@color/primary_text"
+                android:textSize="15sp"
+                android:id="@+id/percent_off"/>
+
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/percent_off_divider"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/percent_off"
+                android:background="@color/secondary_text"
+                />
+            <ImageView
+                android:layout_marginTop="15dp"
+                android:src="@drawable/kuch"
+                android:id="@+id/item_image"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/percent_off_divider"/>
+            <TextView
+                android:text="@{item.price}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_image"
+                android:textColor="@color/primary_text"
+                android:textSize="25sp"
+                android:id="@+id/priceTitle"
+                android:layout_marginTop="20dp"
+                android:gravity="center"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:paddingRight="16dp"
+                android:paddingLeft="16dp"
+                android:text="ADD"
+                android:layout_below="@+id/priceTitle"
+                android:layout_centerHorizontal="true"
+                android:foregroundGravity="center"
+                android:elevation="4dp"/>
+        </RelativeLayout>
+    </ScrollView>
+</layout>
